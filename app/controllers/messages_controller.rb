@@ -28,8 +28,7 @@ class MessagesController < ApplicationController
  end
 
  def update
-
-  if @message.update(massage_params)
+  if @message.update(message_params)
       flash[:success] = 'Messageは正常に更新されました'
       redirect_to @message
   else
@@ -37,7 +36,7 @@ class MessagesController < ApplicationController
       render :edit
   end
  end
- 
+
  def destroy
   @message.destroy
   
